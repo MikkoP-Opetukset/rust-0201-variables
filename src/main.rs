@@ -167,8 +167,8 @@ fn compound_types() {
 }
 
 /// This function is used as an example in the `variables()` function.
-fn add_one(x: i32) -> i32 {
-    x + 1
+fn add_two(x: i32) -> i32 {
+    x + 2
 }
 
 // ========================================================================= //
