@@ -1,0 +1,13 @@
+name: Notify Private Repo of Update
+on:
+  push:
+    branches: [ main ]
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PRIVATE_REPO_PAT }}
+          repository: MikkoP-Opetukset/ic00bj79-rust-programming
+          event-type: update-submodules
